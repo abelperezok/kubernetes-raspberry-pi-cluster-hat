@@ -1,2 +1,24 @@
-# kubernetes-raspberry-pi-cluster-hat
-My implementation of a kubernetes cluster using Raspberry Pi 3, Zero and ClusterHAT
+# How to install Kubernetes from scratch using Raspberry Pi and ClusterHAT 
+
+This is a learning exercise on how to install Kubernetes from scratch on Raspberry Pi 3 (master) and Zeros (workers). 
+
+In this guide I'll walk you through the famous guide [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) created by [Kelsey Hightower](https://github.com/kelseyhightower) I like to call this guide: the very very hard way. 
+
+<img src="img/rasbperrypi-clusterhat.jpg" width="480">
+
+The final result should look like this:
+
+<img src="img/kubernetes-running.png" width="720">
+
+## Prerequisites
+
+* Basic understanding on Linux command line (Debian/Raspbian is recommended)
+* Basic knowledge of Linux networking (general networking)
+* Basic understanding on containers (no docker is required)
+* Local Wi-fi or a free Ethernet port connection 
+* Lots of patience - you'll need it! 
+
+## Content
+
+- [Introduction](00-Intro.md)
+- 
