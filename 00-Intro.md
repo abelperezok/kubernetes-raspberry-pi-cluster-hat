@@ -146,3 +146,21 @@ Install tmux
 ```shell
 sudo apt install tmux
 ```
+
+### Working directories
+
+The following directories are going to be used to store the files produced by the command outputs during this process.
+
+```
+~/pki
+~/certs
+~/config
+~/bin
+~/plugins
+```
+
+Create the directories, positioned in $HOME directory.
+
+```shell
+mkdir pki certs config bin plugins
+```
