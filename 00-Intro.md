@@ -28,7 +28,7 @@ Download the images for each Pi: controller CNAT and each pi (p1 .. p4) in this 
 
 If you're using Wi-Fi, it needs setting up before booting to make it easy to connect totally headless.
 
-### Set up wifi on the controller 
+### Set up Wi-Fi on the controller 
 
 Mount the microSD card and in /boot partition modify the file `/boot/wpa_supplicant.conf`
 
@@ -127,7 +127,7 @@ ssh-copy-id -i .ssh/local_rsa.pub p2
 
 The Client Tools (on the Pi 3) this can be installed optionally on your local environment as well. 
 
-Get the CloudFlare SSL tools
+Get the CloudFlare's PKI toolkit
 
 ```shell
 sudo apt install golang-cfssl
