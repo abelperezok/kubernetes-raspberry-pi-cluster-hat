@@ -1,6 +1,22 @@
 {
     "cSpell.words": [
+        "CNAT",
+        "Flare's",
         "Hightower",
-        "rasbperrypi"
+        "Kubelet",
+        "algo",
+        "armhf",
+        "cfssl",
+        "cfssljson",
+        "clusterctrl",
+        "gencert",
+        "hostnamectl",
+        "initca",
+        "kube",
+        "mkdir",
+        "netdev",
+        "proxier",
+        "rasbperrypi",
+        "ssid"
     ]
 }
