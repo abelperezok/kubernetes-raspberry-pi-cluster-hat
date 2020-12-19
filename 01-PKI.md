@@ -272,8 +272,8 @@ cat > service-account-csr.json <<EOF
   "names": [
     {
       "C": "GB",
-      "L": "Portland",
-      "O": "Manchester",
+      "L": "Manchester",
+      "O": "Kubernetes",
       "OU": "Kubernetes The Hard Way",
       "ST": "England"
     }
