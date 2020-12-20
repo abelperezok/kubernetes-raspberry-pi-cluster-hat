@@ -23,3 +23,4 @@ The final result should look like this:
 - [Introduction](00-Intro.md)
 - [Provision PKI Infrastructure](01-PKI.md)
 - [Build The Binaries](02-Build-Binaries.md)
+- [Prepare Configuration Files](03-Prepare-Config.md)
