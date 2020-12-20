@@ -21,4 +21,5 @@ The final result should look like this:
 ## Content
 
 - [Introduction](00-Intro.md)
-- [Provision PKI infrastructure](01-PKI.md)
+- [Provision PKI Infrastructure](01-PKI.md)
+- [Build The Binaries](02-Build-Binaries.md)
