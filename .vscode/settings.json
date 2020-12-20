@@ -11,6 +11,7 @@
         "Kubelet",
         "LDFLAGS",
         "Werror",
+        "aescbc",
         "algo",
         "apiserver",
         "armel",
@@ -31,6 +32,7 @@
         "hostnamectl",
         "initca",
         "kube",
+        "kubeconfig",
         "kubectl",
         "libbtrfs",
         "libgcc",
@@ -48,6 +50,7 @@
         "rsync",
         "runc",
         "rwxr",
-        "ssid"
+        "ssid",
+        "urandom"
     ]
 }
