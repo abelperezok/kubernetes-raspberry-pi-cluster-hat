@@ -1,6 +1,6 @@
 # Bootstrapping the Kubernetes Control Plane
 
-Inside master node at $HONE directory/ 
+Inside master node at $HOME directory/ 
 
 ```shell
 sudo mkdir -p /etc/kubernetes/config
@@ -8,7 +8,7 @@ sudo mkdir -p /etc/kubernetes/config
 
 No need to give execution permission to the binaries, since they were built from source, the compiler already made them executable. 
 
-Prepare directories and config / certificate files
+Prepare directories and config / certificate files.
 
 ```shell
 sudo mv bin/kube* /usr/local/bin/
