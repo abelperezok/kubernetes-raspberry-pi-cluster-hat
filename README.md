@@ -25,3 +25,4 @@ The final result should look like this:
 - [Part 2 - Build Binaries From Source Code](02-Build-Binaries.md)
 - [Part 3 - Prepare Configuration Files](03-Prepare-Config.md)
 - [Part 4 - Bootstrapping the Etcd Cluster](04-Etcd.md)
+- [Part 5 - Bootstrapping the Control Plane](05-Control-Plane.md)
