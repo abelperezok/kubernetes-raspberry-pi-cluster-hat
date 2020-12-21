@@ -4,7 +4,7 @@ This is a learning exercise on how to install Kubernetes from scratch on Raspber
 
 In this guide I'll walk you through the famous guide [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) created by [Kelsey Hightower](https://github.com/kelseyhightower) I like to call this guide: the very very hard way. 
 
-<img src="img/rasbperrypi-clusterhat.jpg" width="480">
+<img src="img/rasbperrypi-clusterhat.jpg" width="720">
 
 The final result should look like this:
 
