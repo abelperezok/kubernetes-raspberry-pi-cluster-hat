@@ -79,6 +79,8 @@ debian   0/1     ContainerCreating   0          116s
 debian   1/1     Running             0          3m10s
 ```
 
+If this step works, it proves we have external hosts resolution working.
+
 ```shell
 kubectl exec debian -- apt update
 kubectl exec debian -- apt install -y dnsutils
