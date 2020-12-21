@@ -30,3 +30,4 @@ The final result should look like this:
 - [Part 7 - Configuring for Remote Access](07-Remote-Access.md)
 - [Part 8 - Provisioning Pod Network Routes](08-Network-Routes.md)
 - [Part 9 - Deploying the DNS Cluster Add-on](09-Core-DNS.md)
+- [Part 10 - Smoke Test](10-Smoke-Test.md)
