@@ -20,7 +20,8 @@ The final result should look like this:
 
 ## Content
 
-- [Introduction](00-Intro.md)
-- [Provision PKI Infrastructure](01-PKI.md)
-- [Build The Binaries](02-Build-Binaries.md)
-- [Prepare Configuration Files](03-Prepare-Config.md)
+- [Introduction - Setting Up the Cluster](00-Intro.md)
+- [Part 1 - Provision PKI Infrastructure](01-PKI.md)
+- [Part 2 - Build Binaries From Source Code](02-Build-Binaries.md)
+- [Part 3 - Prepare Configuration Files](03-Prepare-Config.md)
+- [Part 4 - Bootstrapping the Etcd Cluster](04-Etcd.md)
