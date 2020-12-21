@@ -26,3 +26,4 @@ The final result should look like this:
 - [Part 3 - Prepare Configuration Files](03-Prepare-Config.md)
 - [Part 4 - Bootstrapping the Etcd Cluster](04-Etcd.md)
 - [Part 5 - Bootstrapping the Control Plane](05-Control-Plane.md)
+- [Part 6 - Bootstrapping the Worker Nodes](06-Worker-Nodes.md)
