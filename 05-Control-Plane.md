@@ -144,7 +144,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## Enable and start services
+## Enable and Start Services
 
 ```shell
 sudo systemctl daemon-reload
@@ -152,7 +152,7 @@ sudo systemctl enable kube-apiserver kube-controller-manager kube-scheduler
 sudo systemctl start kube-apiserver kube-controller-manager kube-scheduler
 ```
 
-## Verify the installation
+## Verify the Installation
 
 The guide recommends to run:
 
@@ -278,7 +278,7 @@ $ curl --cacert ca.pem https://${KUBERNETES_PUBLIC_ADDRESS}:6443/version
 
 Success!
 
-## Transfer the binaries to the worker nodes
+## Transfer the Binaries to the Worker Nodes
 
 ```shell
 for instance in p1 p2; do

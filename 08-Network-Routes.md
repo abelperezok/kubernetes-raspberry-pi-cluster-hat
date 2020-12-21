@@ -18,7 +18,7 @@ shell1   1/1     Running   0          14m   10.200.0.59   p1
 shell2   1/1     Running   0          14m   10.200.1.30   p2 
 ```
 
-## Test without routes
+## Test without Routes
 
 ```shell
 kubectl run shell1 --rm -it --image arm32v5/busybox -- sh
@@ -44,7 +44,7 @@ PING 10.200.0.59 (10.200.0.59): 56 data bytes
 3 packets transmitted, 0 packets received, 100% packet loss
 ```
 
-## Add the missing routes
+## Add the Missing Routes
 
 On master node, run the following command to add the missing routes.
 
@@ -53,7 +53,7 @@ sudo route add -net 10.200.0.0 netmask 255.255.255.0 gw 172.19.181.1
 sudo route add -net 10.200.1.0 netmask 255.255.255.0 gw 172.19.181.2
 ```
 
-## Repeat the test with routes in place
+## Repeat the Test with Routes in Place
 
 ```shell
 kubectl run shell1 --rm -it --image arm32v5/busybox -- sh

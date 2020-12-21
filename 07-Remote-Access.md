@@ -2,7 +2,7 @@
 
 Run in master node, $HOME directory, also embed all the certificates in the config file, in case we move the temporary directory pki and easier if we want to download the configuration file.
 
-## Prepare configuration file
+## Prepare Configuration File
 
 ```shell
 KUBERNETES_PUBLIC_ADDRESS=192.168.1.164
@@ -32,7 +32,7 @@ The result is stored in `~/.kube/config` file, download the config file.
 scp pi@rpi-k8s-master.local:~/.kube/config /home/abel/.kube/
 ```
 
-## Verification from remote computer
+## Verification from Remote Computer
 
 ```shell
 $ kubectl version

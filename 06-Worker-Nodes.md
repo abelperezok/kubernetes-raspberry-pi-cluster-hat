@@ -40,7 +40,7 @@ echo br_netfilter | sudo tee -a /etc/modules
 
 After these steps `reboot` the node.
 
-## Install the worker binaries
+## Install the Worker Binaries
 
 ```shell
 sudo mkdir -p \
@@ -95,7 +95,7 @@ cat <<EOF | sudo tee /etc/cni/net.d/99-loopback.conf
 EOF
 ```
 
-## Configure containerd
+## Configure Containerd
 
 Important attention to `titilambert/armv6-pause:latest`, the original `k8s.gcr.io/pause` doesn’t work on ARMv6, so I found an alternative already published that worked for me. You can always build the image yourself from the source once compiled the `pause` binary but I didn’t go that far.
 
@@ -245,7 +245,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-## Enable and start services
+## Enable and Start Services
 
 ```shell
 sudo systemctl daemon-reload
@@ -253,7 +253,7 @@ sudo systemctl enable containerd kubelet kube-proxy
 sudo systemctl start containerd kubelet kube-proxy
 ```
 
-## Test worker nodes
+## Test Worker Nodes
 
 On the worker nodes, test `containerd` is up and running using `crictl tool`.
 

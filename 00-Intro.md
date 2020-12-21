@@ -1,4 +1,4 @@
-# Introduction - Setting up the cluster
+# Introduction - Setting Up the Cluster
 This is the second attempt after some time when I first tried to set up such a cluster and I started learning [Kubernetes](https://kubernetes.io/). One of the reasons I wanted to do this is because I have two [Raspberry Pi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero/) (and [Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)) lying around and a new (at the time) [Raspberry Pi 3](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/). After experimenting for a bit with them individually, I decided to put them to work together. 
 
 Some research brought my attention to [ClusterHAT](https://clusterhat.com/) which simplified all the messing around with USB gadgets to make the Pi Zeros believe they’re connected to a network using USB. Having tested it for a while, I decided to give it a go and install a Kubernetes cluster. 
@@ -28,7 +28,7 @@ Download the images for each Pi: controller CNAT and each pi (p1 .. p4) in this 
 
 If you're using Wi-Fi, it needs setting up before booting to make it easy to connect totally headless.
 
-### Set up Wi-Fi on the controller 
+### Setting Up Wi-Fi on the Controller 
 
 Mount the microSD card and in /boot partition modify the file `/boot/wpa_supplicant.conf`
 
@@ -50,7 +50,7 @@ touch /boot/ssh
 ```
 
 
-### Understand the networking model
+### Understand the Networking Model
 
 
 Host name      |   External IP |    Internal IP | Role   |
@@ -63,7 +63,7 @@ p2             |      NAT      | 172.19.181.2   | worker |
 
 Diagram 
 
-### Upgrade the system
+### Upgrade the System
 
 It's always a good start with a fresh up to date system. Something particular of Raspbian is that you should use `full-upgrade` instead of just `upgrade` as it could be the case that it doesn't download all the dependencies of the new packages, kind of weird. 
 
@@ -80,7 +80,7 @@ In my case, I wanted to identify the master node from the rest, I updated to `rp
 $ sudo hostnamectl set-hostname rpi-k8s-master
 ```
 
-### Set up and verify connectivity 
+### Set Up and Verify Connectivity 
 
 Once all the base hardware is up and running, it'll be much easier if ssh config file is configured to connect to the pi zeros.
 
@@ -114,7 +114,7 @@ $ cat | sudo tee -a /etc/hosts << HERE
 HERE
 ```
 
-### Generate ssh keys and copy to the pi zeros
+### Generate SSH Keys and Copy to the Pi Zeros
 
 ```shell
 ssh-keygen -t rsa -b 4096 -N "" -f ~/.ssh/local_rsa -C "local key ClusterHAT"
@@ -147,7 +147,7 @@ Install tmux
 sudo apt install tmux
 ```
 
-### Working directories
+### Working Directories
 
 The following directories are going to be used to store the files produced by the command outputs during this process.
 

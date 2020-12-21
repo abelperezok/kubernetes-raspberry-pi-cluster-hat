@@ -2,7 +2,7 @@
 
 In this case there is only one controller node, not really an etcd cluster. 
 
-## Install etcd and etcdctl
+## Install Etcd and Etcdctl
 
 Inside master node at $HOME directory. 
 
@@ -60,7 +60,7 @@ sudo systemctl enable etcd
 sudo systemctl start etcd
 ```
 
-## Verify it’s working
+## Verify It’s Working
 
 ```shell
 sudo etcdctl member list \

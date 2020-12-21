@@ -1,4 +1,4 @@
-# Build Binaries From Source Code
+# Build Binaries from Source Code
 
 Since ARMv6 is not officially supported by Kubernetes, the binaries need to be built from the source in order to get them properly to work. They are all written in Go which facilitates the process of cross-compiling. However, I found it even easier using qemu to to run ARM native golang docker images to compile. 
 
@@ -9,7 +9,7 @@ Use docker to build the binaries, although it’s not necessary, it removes the 
 * [arm32v7/golang](https://hub.docker.com/r/arm32v7/golang) for armhf - Pi 3
 * [arm32v5/golang](https://hub.docker.com/r/arm32v5/golang) for armel - Pi Zero
 
-## Build Kubernetes Binaries For Master Node
+## Build Kubernetes Binaries for Master Node
 
 ```shell
 git clone https://github.com/kubernetes/kubernetes.git
@@ -41,7 +41,7 @@ scp _output/local/bin/linux/arm/kube* pi@rpi-k8s-master.local:~/bin
 
 > **Note** - kubectl can be reused for worker nodes as well, it worked for me.
 
-## Build Kubernetes Binaries For Worker Nodes
+## Build Kubernetes Binaries for Worker Nodes
 
 Before building kubelet, I found numerous issues with a missing cgroup (cpuset) in the raspberry pi zero. I’m not entirely sure why this is a requirement and I removed it from the code. I published my findings in the [raspberry pi forum](https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=219644#p1348691). 
 

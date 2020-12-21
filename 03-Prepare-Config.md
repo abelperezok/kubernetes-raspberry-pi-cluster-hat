@@ -130,8 +130,6 @@ kubectl config set-context default \
 kubectl config use-context default --kubeconfig=admin.kubeconfig
 ```
 
-
-
 ## Generating the Data Encryption Config and Key
 
 ```shell
