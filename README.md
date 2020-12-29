@@ -32,3 +32,7 @@ The final result should look like this:
 - [Part 9 - Deploying the DNS Cluster Add-on](09-Core-DNS.md)
 - [Part 10 - Smoke Test](10-Smoke-Test.md)
 - [Part 11 - References](11-References.md)
+
+## Extras
+- [Part 12 - NGINX Ingress Controller](12-Ingress-Controller.md)
+- [Part 13 - TLS Termination](13-TLS-Termination.md)
