@@ -36,5 +36,5 @@ The final result should look like this:
 ## Extras
 - [Part 12 - NGINX Ingress Controller](12-Ingress-Controller.md)
 - [Part 13 - TLS Termination](13-TLS-Termination.md)
-- Metrics Server - TBD
+- [Part 14 - Metrics Server](14-Metrics-Server.md)
 - Web UI (Dashboard) - TBD
