@@ -165,7 +165,9 @@ docker push abelperezok/metrics-server-armv6:0.4.1
 
 Download the manifest from https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
+```shell
 curl -o manifests.yaml https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml -L
+```
 
 Find the `Deployment` object and replace 
 
