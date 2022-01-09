@@ -13,3 +13,7 @@
 * https://github.com/kubernetes/kubernetes/issues/26093 
 
 * https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=219644&p=1770842
+
+* https://downey.io/blog/exploring-cgroups-raspberry-pi/
+
+* https://github.com/kubernetes-sigs/kubespray/issues/1227

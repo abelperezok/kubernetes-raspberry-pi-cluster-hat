@@ -164,3 +164,34 @@ Create the directories, positioned in $HOME directory.
 ```shell
 mkdir pki certs config bin plugins
 ```
+
+### Enable Cgroups Memory
+On each worker node append `cgroup_enable=memory cgroup_memory=1` to */boot/cmdline.txt*. This needs to be run as root.
+```
+sudo su
+echo -n ' cgroup_enable=memory cgroup_memory=1' | tee -a /boot/cmdline.txt
+```
+
+Then restart the node:
+```
+sudo shutdown -r 0
+```
+
+Cgroups memory needs to be turned on, or in step 6 [Test Worker Nodes](https://github.com/abelperezok/kubernetes-raspberry-pi-cluster-hat/blob/master/06-Worker-Nodes.md#test-worker-nodes) your node status may all come up as `NotReady`.
+
+After running step 6 on master:
+
+```
+kubectl get nodes --kubeconfig config/admin.kubeconfig
+```
+
+the statuses were all `NotReady`.  Running
+
+```
+journalctl -fu kubelet
+```
+On *p1*, showed an error:
+
+> Failed to start ContainerManager system validation failed - Following Cgroup subsystem not mounted: [memory]  
+
+Turns out that the memory cgroup is disabled by default since it adds some [additional memory overhead](https://github.com/raspberrypi/linux/issues/1950).
