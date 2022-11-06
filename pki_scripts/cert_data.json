@@ -1,0 +1,14 @@
+{
+    "CN": "${CN}",
+    "key": {
+        "algo": "$KEY_ALGO",
+        "size": $KEY_SIZE
+    },
+    "names": [{
+        "C": "${COUNTRY}",
+        "L": "${LOCALITY}",
+        "O": "${ORG}",
+        "OU": "${ORG_UNIT}",
+        "ST": "${STATE_PROV}"
+    }]
+}
