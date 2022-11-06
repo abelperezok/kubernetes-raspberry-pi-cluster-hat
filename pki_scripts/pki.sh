@@ -27,16 +27,16 @@
 #
 # ./pki.sh
 ######################################################
-COUNTRY=""
-STATE_PROV=""
-LOCALITY=""
-ORG=""
-ORG_UNIT=""
-KUBERNETES_PUBLIC_ADDRESS=
-INTERNAL_IP_BASE=172.19.180.
+declare -x COUNTRY=""
+declare -x STATE_PROV=""
+declare -x LOCALITY=""
+declare -x ORG=""
+declare -x ORG_UNIT=""
+declare -x KUBERNETES_PUBLIC_ADDRESS=
+declare -x INTERNAL_IP_BASE=172.19.180.
 declare -ax NODES=(1 2 3 4)
-KEY_ALGO="rsa"
-KEY_SIZE=2048
+declare -x KEY_ALGO="rsa"
+declare -x KEY_SIZE=2048
 declare -ax CSR_FILE=(ca admin p1 p2 p3 p4\
  kube-controller-manager kube-proxy\
  kube-scheduler kubernetes service-account)
@@ -45,11 +45,12 @@ declare -ax CSR_CN=(Kubernetes admin system:node:p1\
  system:kube-controller-manager system:kube-proxy\
  system:kube-scheduler kubernetes  service-accounts)
 
-KUBERNETES_HOSTNAMES=kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local
+declare -x KUBERNETES_HOSTNAMES=kubernetes,kubernetes.default,kubernetes.default.svc,kubernetes.default.svc.cluster,kubernetes.svc.cluster.local
 
 # Make the pki directory and copy in the ca config.
 mkdir -p ~/pki
 cp ca-config.json ~/pki
+cp cert_data.json ~/pki
 cd ~/pki
 
 
@@ -77,7 +78,7 @@ done
 
 # Generate node certificates.
 for node in ${NODES[*]}; do
-    INTERNAL_IP=172.19.181.${node}
+    INTERNAL_IP=${INTERNAL_IP_BASE}${node}
     cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -hostname=p${node},${INTERNAL_IP} -profile=kubernetes p${node}-csr.json | cfssljson -bare p${node}
 done
 
